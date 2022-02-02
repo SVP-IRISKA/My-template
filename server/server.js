@@ -1,7 +1,7 @@
 import express from "express";
 
 const server = express();
-const PORT = 8080;
+const PORT = 8087;
 
 server.get('/', (req, res) => {
     res.send('Express Server test ignor')
