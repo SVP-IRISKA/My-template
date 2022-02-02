@@ -4,7 +4,7 @@ const server = express();
 const PORT = 8080;
 
 server.get('/', (req, res) => {
-    res.send('Express Server test')
+    res.send('Express Server test ignor')
   })
 
 server.listen(PORT, () => {
