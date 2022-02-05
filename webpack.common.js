@@ -1,10 +1,11 @@
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 import { resolve } from "path";
 
 const config = {
   entry: "./client/main.jsx",
   resolve: {
-    extension: [".js", ".jsx", ".json"],
+    extensions: ['.js', '.jsx', '.json'],
   },
   output: {
     filename: "assets/js/[name].bundle.js",
@@ -30,18 +31,22 @@ const config = {
       },
 
       {
-        test: /\.(css|sass|scss)$/,
+        test: /\.(css|sass|scss)$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          "style-loader",
           "css-loader",
           "sass-loader",
         ],
       },
     ],
   },
-  plugins: [new MiniCssExtractPlugin({ filename: "assets/css/style.css" })],
-  template: "client/index.html",
+  plugins: [
+    new MiniCssExtractPlugin({ 
+      filename: "assets/css/style.css" 
+    }),
+    new HtmlWebpackPlugin({
+  template: "client/index.html"})
+  ]
 };
 
 export default config;

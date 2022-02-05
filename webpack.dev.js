@@ -11,7 +11,7 @@ const config = {
   devServer: {
     hot: true,
     historyApiFallback: true,
-    port: 8087,
+    port: 8081,
     host: 'localhost',
     client: {
       overlay: {

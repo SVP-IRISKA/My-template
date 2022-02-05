@@ -1,7 +1,7 @@
 import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import TerserPlugin from "terser-webpack-plugin";
-// import { merge } from "webpack-merge";
-// import common from "./webpack.common.js";
+import { merge } from "webpack-merge";
+import common from "./webpack.common.js";
 
 const config = {
   mode: "production",
@@ -18,7 +18,7 @@ const config = {
       }),
       new CssMinimizerPlugin({
         parallel: true,
-        exclude: /\/node_modules/,
+        exclude: /node_modules/,
         minimizerOptions: {
           preset: [
             "default",
@@ -34,4 +34,4 @@ const config = {
   },
 };
 
-export default config;
+export default merge(common, config)
