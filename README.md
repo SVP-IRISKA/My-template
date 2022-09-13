@@ -4,18 +4,18 @@ template for home projects and test tasks
 Boilerplate for pet-projects
 
 How to use it?
-Install modules
 
+**Install modules
 yarn install
-Run a project in development mode
 
+**Run a project in development mode
 yarn run dev
-Run server only
 
+**Run server only
 yarn run watch:server
-Run client only
 
+**Run client only
 yarn run watch:client
-Build a project
 
+**Build a project
 yarn run build:prod
